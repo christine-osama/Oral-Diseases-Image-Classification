@@ -39,7 +39,26 @@ The best performing model is served through a Gradio interface that accepts an u
 
 ## Results
 
-See the comparative analysis section in the notebook for the full metrics table, training curves, and confusion matrices for each model, along with a written discussion of the results.
+**Best model: EfficientNetB0** (fine tuned)
+
+| Metric | Score |
+|---|---|
+| Accuracy | 88.28% |
+| Precision | 89.34% |
+| Recall | 88.28% |
+| F1 Score | 88.62% |
+
+Full comparison across all five models (Custom CNN, EfficientNetB0, EfficientNetB0 tuned, ResNet50V2, DenseNet121):
+
+| Model | Accuracy | Precision | Recall | F1 | Params | Inference (ms) |
+|---|---|---|---|---|---|---|
+| EfficientNetB0 | 88.28% | 89.34% | 88.28% | 88.62% | 4,379,049 | 12.50 |
+| EfficientNetB0 (tuned) | 87.30% | 88.27% | 87.30% | 87.60% | 4,379,049 | 9.77 |
+| Custom CNN | 86.66% | 88.29% | 86.66% | 86.99% | 457,670 | 4.82 |
+| ResNet50V2 | 86.49% | 87.28% | 86.49% | 86.74% | 24,090,886 | 15.00 |
+| DenseNet121 | 82.17% | 83.44% | 82.17% | 82.41% | 7,301,446 | 17.80 |
+
+The untuned EfficientNetB0 backbone edged out the tuned version slightly on this test split, and was selected as the final deployed model on that basis. See the comparative analysis section in the notebook for training curves and per class confusion matrices, along with a written discussion of the results.
 
 ## Tech stack
 
@@ -52,6 +71,3 @@ TensorFlow / Keras, Keras Tuner, scikit-learn, pandas, Gradio
 3. Training produces a saved `.keras` model for the custom CNN, each backbone, and the final tuned model.
 4. The last cell launches a Gradio interface with a public link for testing the deployed model on new images.
 
-## License
-
-This project is provided for educational purposes.

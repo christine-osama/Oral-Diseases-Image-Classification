@@ -39,7 +39,8 @@ The best performing model is served through a Gradio interface that accepts an u
 ## 🎥 Demo
 
 
-Uploading WhatsApp Video 2026-11-12 at 10.02.31 AM.mp4…
+https://github.com/user-attachments/assets/6f70d8be-1ae5-4e08-8a39-cb9865c9c044
+
 
 
 

@@ -36,6 +36,12 @@ The best performing model is served through a Gradio interface that accepts an u
 - Class weighting is applied during training to account for the uneven number of images per disease category.
 - Every training stage checkpoints to disk after each epoch, so an interrupted training run resumes from its last completed epoch rather than starting over.
 - Datasets are cached to disk rather than held in memory, since caching a dataset of this size in RAM is a meaningful contributor to out of memory crashes on a shared Colab runtime.
+## 🎥 Demo
+
+
+Uploading WhatsApp Video 2026-11-12 at 10.02.31 AM.mp4…
+
+
 
 ## Results
 
